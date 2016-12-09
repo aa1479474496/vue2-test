@@ -1,0 +1,41 @@
+$hoverColor: skyblue;
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearFix:after {
+    content: "";
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.indexNav {
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 10px;
+    &:hover {
+        color: $hoverColor;
+    }
+}
+
+.content {
+    width: 500px;
+    margin: 10px auto;
+    text-align: center;
+}
