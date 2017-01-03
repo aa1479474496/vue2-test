@@ -8,10 +8,10 @@
     </div>
 </template>
 
-<style>
-    .router-link-active {
+<style scope>
+    /*.router-link-active {
         color: red;
-    }
+    }*/
 </style>
 
 <script>

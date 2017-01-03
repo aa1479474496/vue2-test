@@ -1,8 +1,8 @@
-<template>
+<template name="abc">
     <div>
        
         <p>test</p>
-        <router-link :to="{path:'/test1'}">去test1页面</router-link>
+        <router-link :to="{path:'/test1'}" :class="{on:$store.state.route.path == '/test1'}">去test1页面</router-link>
         <router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>
         <router-view></router-view>
         <!--<info></info>-->
@@ -29,6 +29,10 @@
     .active {
         color: skyblue;
     }
+    .on{
+        background:yellowgreen;
+    }
+    
 </style>
 <script>
     // import $ from 'jquery'
@@ -38,6 +42,7 @@
             Info
         },
         mounted: function() {
+            console.log(this.$store.state.route.path);
             // var [a, b, ...c] = [1, 2, 3, 4, 5, 6];
             var c = {
                 a: 1,
