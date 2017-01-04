@@ -28,7 +28,6 @@ const actions = {
     decrementTest: ({ commit }) => commit('decrement'),
     paramsTest: ({ commit }, n) => commit('count2Test', n)
 }
-
 const getters = {
     doneTodos: state => {
         return state.todos.filter(todo => todo.done)

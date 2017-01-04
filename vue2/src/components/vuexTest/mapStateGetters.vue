@@ -12,12 +12,8 @@
 </template>
 
 <script>
-    import {
-        mapState
-    } from 'vuex'
-    import {
-        mapGetters
-    } from 'vuex'
+    import { mapState } from 'vuex'
+    import { mapGetters } from 'vuex'
     export default {
         data() {
             return {
