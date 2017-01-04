@@ -2,9 +2,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { sync } from 'vuex-router-sync'
 import store from './vuex/store'
+import VueResource from 'vue-resource'
 import App from './App'
 import $ from 'jquery'
+import 'bootstrap'
+import './assets/css/bootstrap.min.css'
+import './assets/css/bootstrap-theme.min.css'
 Vue.use(VueRouter);
+Vue.use(VueResource)
 
 // const routes = [{
 //         path: '',
@@ -90,6 +95,13 @@ const routes = [{
                 }
             }
         ]
+    },
+    {
+        path: '/regionAdd',
+        name: 'regionAdd',
+        component: function(resolve) {
+            require(['./components/region/regionAdd.vue'], resolve)
+        }
     }
 
 ];
