@@ -109,7 +109,8 @@
             }
         },
         mounted() {
-            this.getProvinceList()
+            // this.getProvinceList()
+            console.log(1);
         },
         methods: {
             getProvinceList() {

@@ -82,13 +82,13 @@ const routes = [{
                 }
             },
             {
-                path: '/test1',
+                path: 'test1',
                 name: 'test1',
                 component: function(resolve) {
                     require(['./components/test/test1.vue'], resolve)
                 }
             }, {
-                path: '/test2/:storeId',
+                path: 'test2/:storeId',
                 name: 'test2',
                 component: function(resolve) {
                     require(['./components/test/test2.vue'], resolve)
