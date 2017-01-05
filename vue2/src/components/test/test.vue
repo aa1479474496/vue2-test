@@ -11,7 +11,7 @@
                 v-bind:class="[liIndex == index ? 'active' : '']"
                 :key="item.id"
                 @click="changeColor(index)">
-                {{item}}--{{index}}   
+                {{item}}--{{index}}      
             </li>
         </ul>
         <div id="abc">123</div>
