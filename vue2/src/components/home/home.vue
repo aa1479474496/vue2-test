@@ -12,6 +12,7 @@
         <router-link :to="{name:'Mutations'}">Mutations（引用mapState，mapGetters,Mutations）</router-link>
         <router-link :to="{name:'actions'}">actions（为了处理异步操作Actions）</router-link>
         <router-link :to="{path:'/regionAdd'}">省市区三级联动</router-link>
+        <router-link :to="{path:'/calendar'}">日期插件</router-link>
         <!--<router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>-->
 
         <!--<router-link to="/test1">/test/test1</router-link>-->

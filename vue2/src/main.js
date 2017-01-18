@@ -102,6 +102,13 @@ const routes = [{
         component: function(resolve) {
             require(['./components/region/regionAdd.vue'], resolve)
         }
+    },
+    {
+        path: '/calendar',
+        name: 'calendar',
+        component: function(resolve) {
+            require(['./components/calendar/calendar.vue'], resolve)
+        }
     }
 
 ];

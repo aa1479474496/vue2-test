@@ -1,0 +1,103 @@
+p,ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 14px/1.5 Verdana , Arial, Helvetica, sans-serif;
+    color: #333;
+}
+ul,ol,li{list-style: none;}
+.wid_50{
+    width: 50%;
+}
+.fl{float: left;}
+.fr{float: right;}
+.pink { color: #f05b72!important; }
+
+.calendarModal {
+    z-index: 998;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#zcalendar-box{
+    position: absolute;
+    /*margin-top: 62px;*/
+    margin-top: 10px;
+    width: 560px;
+    -webkit-box-shadow: 0 0 6px #bbb;
+    -moz-box-shadow: 0 0 6px #bbb;
+    box-shadow: 0 0 6px #bbb;
+    background: #fff;
+    z-index: 999;
+}
+.calendar-title {
+    position: relative;
+    background-color: #f5f6f7;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #2c3e50;
+}
+.calendar-week {
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-month li {
+    float: left;
+    width: 38px;
+    margin: 1px 1px 0 0;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+.overdue_date{
+    /*过期的时间*/
+    color: #959ea7;
+    cursor: default;
+}
+.show_date:hover{
+    /*可以选的时间*/
+    color: #fff;
+    background-color: #F05B72;
+    cursor: pointer;
+}
+.sec_date{
+    /*选中的时间 */
+    color: #fff;
+    background-color: #F05B72;
+}
+.clear_date {
+    padding: 7px 11px 10px;
+    color: #2c3e50;
+    clear: both;
+    font-size: 12px;
+    /*width: 52px;*/
+}
+.close_date{
+    cursor: pointer;
+}
+.clear_span{
+    cursor: pointer;
+    color: #F05B72;
+    margin-right: 16px;
+}
+.cal_pre, .cal_next {
+    background: url(../images/icon_cal_small.png) no-repeat center 12px;
+    width: 48px;
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+.cal_pre {
+    left: 0;
+}
+.cal_next {
+    background-position: center -35px;
+    right: 0;
+}
