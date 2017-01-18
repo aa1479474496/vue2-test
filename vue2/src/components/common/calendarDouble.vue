@@ -325,6 +325,7 @@
                 this.endDate = '';
                 this.clearName();
                 this.clearSecDate();
+                this.$emit('setDate','','');
             },
             //关闭
             cancel() {
