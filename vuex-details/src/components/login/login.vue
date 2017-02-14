@@ -16,6 +16,7 @@
             <button @click="checkLogin">我要登录</button>
             <button @click="loginOut">退出登录</button>
         </div>
+        <p id="abc">1233333</p>
     </div>
 </template>
 
@@ -34,6 +35,9 @@
             ...mapState({
                  isLogin: state => state.login.isLogin,
             })
+        },
+        mounted() {
+            console.log($('#abc'))
         },
         methods:{
            checkLogin(){
