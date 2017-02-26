@@ -23,6 +23,33 @@ const routes = [{
         path: '/todoList',
         name: 'todo-todoList',
         component(resolve) { require(['./components/todos/todoList.vue'], resolve) }
+    },
+    {
+        path: '/learn',
+        name: 'learn',
+        component(resolve) { require(['./components/learn/learnList.vue'], resolve) },
+        children: [
+             {
+                path: '/vfor',
+                name: 'vfor',
+                component(resolve) { require(['./components/learn/vfor.vue'], resolve) }
+            },
+             {
+                path: '/vfor1',
+                name: 'vfor1',
+                component(resolve) { require(['./components/learn/vfor1.vue'], resolve) }
+            },
+             {
+                path: '/vfor2',
+                name: 'vfor2',
+                component(resolve) { require(['./components/learn/vfor2.vue'], resolve) }
+            },
+             {
+                path: '/vfor3',
+                name: 'vfor3',
+                component(resolve) { require(['./components/learn/vfor3.vue'], resolve) }
+            }
+        ]
     }
 ];
 

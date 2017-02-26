@@ -3,6 +3,11 @@ $hoverColor: skyblue;
     margin: 0px;
     padding: 0px
 }
+body{
+    padding:40px;
+    font-size:16px;
+    color:#333;
+}
 
 .fl {
     float: left
@@ -24,6 +29,12 @@ $hoverColor: skyblue;
 .text-center {
     text-align: center;
 }
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
 
 .indexNav {
     cursor: pointer;
@@ -38,4 +49,33 @@ $hoverColor: skyblue;
     width: 500px;
     margin: 10px auto;
     text-align: center;
+}
+li{
+    line-height:30px;
+}
+hr{
+    width: 300px;
+    border: 1px dashed #fa8200;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.learnListNav{
+    float:left;
+    width:300px;
+}
+.learnListNav li{
+    cursor: pointer;
+     &:hover {
+        color: darkmagenta;
+        text-decoration: underline;
+    }
+}
+.learnLisView{
+        margin-left:300px;
+}
+// .router-link-active{
+//     color:sandybrown;
+// }
+.colActive{
+    color:red;
 }
