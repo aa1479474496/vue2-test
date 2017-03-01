@@ -29,7 +29,7 @@
         mounted() {
             this.$nextTick(function() {
                 // this.mydata = JSON.parse(data, null, 4);
-                this.mydata = JSON.parse(JSON.stringify(data, null, 4));
+                this.mydata = data;
                 // this.mydata = JSON.parse(this.mydata);
                 console.log(typeof this.mydata);
             })
