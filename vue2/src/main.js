@@ -109,6 +109,27 @@ const routes = [{
         component: function(resolve) {
             require(['./components/calendar/calendar.vue'], resolve)
         }
+    },
+    {
+        path: '/tree1',
+        name: 'tree1',
+        component: function(resolve) {
+            require(['./components/tree/tree1.vue'], resolve)
+        }
+    },
+    {
+        path: '/tree2',
+        name: 'tree2',
+        component: function(resolve) {
+            require(['./components/tree/tree2.vue'], resolve)
+        }
+    },
+    {
+        path: '/mock1',
+        name: 'mock1',
+        component: function(resolve) {
+            require(['./components/mock/mock1.vue'], resolve)
+        }
     }
 
 ];
