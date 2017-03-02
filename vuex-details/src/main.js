@@ -67,7 +67,7 @@ const router = new VueRouter({
     scrollBehavior(to, from, savedPosition) {
         // return 期望滚动到哪个的位置
         if (savedPosition) {
-
+            //当使用浏览器的前进后退时才会记录位置
             return savedPosition
         } else {
             return { x: 0, y: 0 }

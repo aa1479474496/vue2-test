@@ -24,8 +24,12 @@
                     {name:'sohu',age:'25'},
                     {name:'sina',age:'15'},
                     {name:'youku',age:'55'},
-                ]
+                ],
+                ddddd: this.$route.params.def,
             }
+        },
+        mounted() {
+            console.log(this.ddddd)
         },
         computed: {
             devstudent() {

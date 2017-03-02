@@ -24,8 +24,12 @@
                     {name:'sohu',age:'25'},
                     {name:'sina',age:'15'},
                     {name:'youku',age:'55'},
-                ]
+                ],
+                abcd: this.$route.query.abc,
             }
+        },
+        mounted() {
+            console.log(this.abcd);
         },
         computed: {
             devstudent() {

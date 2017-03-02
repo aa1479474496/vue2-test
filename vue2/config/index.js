@@ -7,7 +7,7 @@ module.exports = {
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/dist',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
@@ -25,6 +25,7 @@ module.exports = {
       '/appServer': {
         // target: 'http://192.168.13.235:8080/',
         target: 'https://yunpuappservice.tputiandi.com/',
+        // target: 'localhost/',
         changeOrigin: true,
         pathRewrite: {
           '^/appServer': ''
