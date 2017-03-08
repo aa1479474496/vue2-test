@@ -16,6 +16,8 @@
         <router-link :to="{path:'/tree1'}">树形组件</router-link>
         <router-link :to="{path:'/tree2'}">树形组件2</router-link>
         <router-link :to="{path:'/mock1'}">mock.js</router-link>
+        <router-link :to="{path:'/mixin1'}">mixin</router-link>
+        <router-link :to="{path:'/directives'}">自定义指令</router-link>
         <!--<router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>-->
 
         <!--<router-link to="/test1">/test/test1</router-link>-->

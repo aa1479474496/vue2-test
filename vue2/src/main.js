@@ -8,6 +8,8 @@ import $ from 'jquery'
 import 'bootstrap'
 import './assets/css/bootstrap.min.css'
 import './assets/css/bootstrap-theme.min.css'
+// import './components/common/directives.js'
+require('./components/common/directives.js')
 Vue.use(VueRouter);
 Vue.use(VueResource)
 
@@ -130,6 +132,42 @@ const routes = [{
         component: function(resolve) {
             require(['./components/mock/mock1.vue'], resolve)
         }
+    },
+    {
+        path: '/mixin1',
+        name: 'mixin1',
+        component: function(resolve) {
+            require(['./components/mixin/mixin1.vue'], resolve)
+        }
+    },
+    {
+        path: '/directives',
+        name: 'directives',
+        component(resolve) {
+            require(['./components/directives/directives.vue'], resolve)
+        },
+        children: [
+            {
+                path:'',
+                component(resolve) {
+                    require(['./components/directives/directives1.vue'], resolve)
+                }
+            },
+            {
+                path:'directives1',
+                name:'directives1',
+                component(resolve) {
+                    require(['./components/directives/directives1.vue'], resolve)
+                }
+            },
+             {
+                path:'directives2',
+                name:'directives2',
+                component(resolve) {
+                    require(['./components/directives/directives2.vue'], resolve)
+                }
+            }
+        ]
     }
 
 ];
