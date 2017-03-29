@@ -3,15 +3,20 @@ import VueRouter from 'vue-router'
 import { sync } from 'vuex-router-sync'
 import store from './vuex/store'
 import VueResource from 'vue-resource'
+import Toast1 from './components/common/toast1.js'
+
 import App from './App'
 import $ from 'jquery'
 import 'bootstrap'
 import './assets/css/bootstrap.min.css'
 import './assets/css/bootstrap-theme.min.css'
+import './assets/css/main.css'
 // import './components/common/directives.js'
 require('./components/common/directives.js')
 Vue.use(VueRouter);
 Vue.use(VueResource)
+
+Vue.use(Toast1);
 
 // const routes = [{
 //         path: '',
@@ -168,6 +173,13 @@ const routes = [{
                 }
             }
         ]
+    },
+    {
+        path: '/plugins',
+        name: 'plugins',
+        component: function(resolve) {
+            require(['./components/plugins/plugins.vue'], resolve)
+        }
     }
 
 ];

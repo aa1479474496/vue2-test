@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.toast-box {
+    width: 300px;
+    height: 134px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+
+}
+.vue-toast {
+    
+    /*height: 100px;*/
+    /*background-color: gray;*/
+    font-size: 24px;
+    position: relative;
+    z-index: 999;
+    animation: show-toast .5s;
+    -webkit-animation: show-toast .5s;
+}
+
+.toast-mask {
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
+    
+}
+
+.toast-title {
+    background: #ffa900;
+    font-size: 14px;
+    padding-left: 12px;
+    color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.close-span {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+    color: #b4b4b4;
+    background: #fff;
+    cursor: pointer;
+}
+
+.toast-content {
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+}
+
+@keyframes opacity-toast
+{
+    from {
+        opacity: 0;
+        
+}
+    to {
+        opacity: 0.3;
+    }
+}
+
+@keyframes show-toast
+{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}
