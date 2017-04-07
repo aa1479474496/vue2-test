@@ -187,6 +187,13 @@ const routes = [{
         component: function(resolve) {
             require(['./components/table/table.vue'], resolve)
         }
+    },
+     {
+        path: '/express',
+        name: 'express',
+        component: function(resolve) {
+            require(['./components/express/express.vue'], resolve)
+        }
     }
 
 ];

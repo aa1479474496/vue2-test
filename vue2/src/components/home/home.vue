@@ -20,6 +20,7 @@
         <router-link :to="{path:'/directives'}">自定义指令</router-link>
         <router-link :to="{path:'/plugins'}">toast插件</router-link>
         <router-link :to="{path:'/table'}">table测试</router-link>
+        <router-link :to="{path:'/express'}">express测试</router-link>
         <!--<router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>-->
 
         <!--<router-link to="/test1">/test/test1</router-link>-->

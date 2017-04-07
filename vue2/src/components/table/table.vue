@@ -59,7 +59,7 @@
                     <td>5555555555</td>
                 </tr>
             </tbody>
-            <table>
+            </table>
     </div>
 </template>
 
