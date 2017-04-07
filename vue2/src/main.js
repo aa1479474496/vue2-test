@@ -180,6 +180,13 @@ const routes = [{
         component: function(resolve) {
             require(['./components/plugins/plugins.vue'], resolve)
         }
+    },
+     {
+        path: '/table',
+        name: 'table',
+        component: function(resolve) {
+            require(['./components/table/table.vue'], resolve)
+        }
     }
 
 ];

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h3 class="text-center">自定义批令</h1>
+        <h3 class="text-center">自定义批令</h3>
         <div class="row text-center">
             <div class="col-xs-6">
                 <router-link :to="{path:'/directives/directives1'}">去directives1页面</router-link>

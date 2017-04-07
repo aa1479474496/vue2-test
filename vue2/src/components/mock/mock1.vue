@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<script>
+<!--<script>
     var Mock = require('mockjs');
     // [{},{},{}]
     var data = Mock.mock({
@@ -39,5 +39,5 @@
             
         }
     }
-</script>
+</script>-->
 

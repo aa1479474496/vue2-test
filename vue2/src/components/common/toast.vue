@@ -81,7 +81,8 @@ export default {
   },
   data() {
     return {
-      visible: false
+      visible: false,
+      test: 'test'
     };
   },
   computed: {

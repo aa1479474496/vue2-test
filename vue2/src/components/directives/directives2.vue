@@ -14,7 +14,8 @@
                 // 指令的定义---
                 inserted: function (el) {
                     // 聚焦元素
-                    el.focus()
+                    setTimeout(() => { el.focus()}, 2000)
+                   
                     console.log(el)
                 }
             }

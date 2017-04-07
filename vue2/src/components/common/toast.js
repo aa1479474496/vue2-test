@@ -7,18 +7,23 @@ instance是Vue对象
 */
 let getAnInstance = () => {
     // 销毁Vue对象，只取第一个Vue对象
+    
     if (toastPool.length > 0) {
+         debugger;
         let instance = toastPool[0];
         toastPool.splice(0, 1);
+       
         return instance;
     }
     //el表示将组件挂载到的div主体上
     return new ToastConstructor({
         el: document.createElement('div')
     });
+     
 };
 
 let returnAnInstance = instance => {
+   
     if (instance) {
         toastPool.push(instance);
     }
@@ -31,6 +36,7 @@ let removeDom = event => {
 };
 //原型方法
 ToastConstructor.prototype.close = function() {
+    // console.log(this.test);
     //修改视图boolean值，将Toast视图隐藏
     this.visible = false;
     this.$el.addEventListener('transitionend', removeDom);
@@ -40,11 +46,12 @@ ToastConstructor.prototype.close = function() {
 //防止options变成undefined,同时传递一个{}对象参数
 let Toast = (options = {}) => {
 
-    console.log(ToastConstructor)
+    // console.log(ToastConstructor)
 
-    let duration = options.duration || 30000;
+    let duration = options.duration || 3000;
 
     let instance = getAnInstance();
+    console.log(instance)
     instance.closed = false;
     clearTimeout(instance.timer);
     instance.message = typeof options === 'string' ? options : options.message;
