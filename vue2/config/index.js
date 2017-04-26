@@ -26,7 +26,7 @@ module.exports = {
       '/appServer': {
         // target: 'http://192.168.13.235:8080/',
         // target: 'https://yunpuappservice.tputiandi.com/',
-        target: 'localhost:3000/',
+        target: 'http://localhost:3000/',
         // target: 'localhost/',
         changeOrigin: true,
         pathRewrite: {

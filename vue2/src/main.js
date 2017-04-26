@@ -14,7 +14,9 @@ import './assets/css/main.css'
 // import './components/common/directives.js'
 require('./components/common/directives.js')
 Vue.use(VueRouter);
-Vue.use(VueResource)
+Vue.use(VueResource);
+import axios from 'axios';
+Vue.prototype.$htp = axios;
 
 Vue.use(Toast1);
 
