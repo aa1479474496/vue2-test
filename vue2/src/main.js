@@ -4,6 +4,7 @@ import { sync } from 'vuex-router-sync'
 import store from './vuex/store'
 import VueResource from 'vue-resource'
 import Toast1 from './components/common/toast1.js'
+import validate from './components/common/validate.js'
 
 import App from './App'
 import $ from 'jquery'
@@ -19,6 +20,7 @@ import axios from 'axios';
 Vue.prototype.$htp = axios;
 
 Vue.use(Toast1);
+Vue.use(validate);
 
 // const routes = [{
 //         path: '',
@@ -196,6 +198,35 @@ const routes = [{
         component: function(resolve) {
             require(['./components/express/express.vue'], resolve)
         }
+    },
+    {
+        path: '/validate',
+        name: 'validate',
+        component(resolve) {
+            require(['./components/validate/validate.vue'], resolve)
+        },
+        children: [
+            {
+                path:'',
+                component(resolve) {
+                    require(['./components/validate/validate1.vue'], resolve)
+                }
+            },
+            {
+                path:'validate1',
+                name:'validate1',
+                component(resolve) {
+                    require(['./components/validate/validate1.vue'], resolve)
+                }
+            },
+             {
+                path:'validate2',
+                name:'validate2',
+                component(resolve) {
+                    require(['./components/validate/validate2.vue'], resolve)
+                }
+            }
+        ]
     }
 
 ];
