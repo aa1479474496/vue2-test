@@ -18,17 +18,20 @@ validate.install = function (Vue, options) {
     Vue.directive('va', {
         bind(el, binding, vnode) {
             // 逻辑...
-            console.log(binding.value)
-            console.log($(el));
-            el.addEventListener('change', function(){
-                // console.log('------');
-                // console.log(el.value);
-                // console.log(binding.value);
-                // console.log('------');
-            })
+            // console.log(binding.value)
+            // console.log($(el));
+            // el.addEventListener('change', function(){
+            //     // console.log('------');
+            //     console.log(el.value);
+            //     // console.log(binding.value);
+            //     // console.log('------');
+            // })
+            // $(el).on('blur', function() {
+            //     console.log(12)
+            // })
         },
         update(el, binding, vnode) {
-            console.log(1);
+            // console.log(1);
             
             var reg = binding.arg,
                 value = binding.value;
@@ -48,7 +51,24 @@ validate.install = function (Vue, options) {
             //  console.log(vnode.context);
              
         }
+  });
+  Vue.directive('vaCheck', {
+         bind: function (el, binding, vnode) {
+              var vm = vnode.context;
+              el.addEventListener('click', function () {
+                //   console.log(vm)
+                //   var vas = $('.va');
+                  $('.va').focus();
+                //   console.log(vas);
+                //   for(var i = 0; i < vas.length; i++) {
+                //         vas[i].on('blur',function() {
+                //             console.log(i)
+                //         });
+                //   }
+              })
+         }
   })
+
 }
 
 module.exports = validate;

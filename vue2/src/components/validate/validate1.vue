@@ -5,12 +5,13 @@
             <div class="row">
                 <div class="col-xs-4">
                     <label for="">用户名：</label>
-                    <input v-va:imgCode="imgCode" v-model.trim="imgCode" type="text" name="" value="">
+                    <input v-va:imgCode="imgCode" v-model.trim="imgCode" type="text" name="img" value="" class="va">
                 </div>
                  <div class="col-xs-4">
                     <label for="">密码：</label>
-                    <input type="text" name="" v-va:mobile="mobile" v-model.trim="mobile">
+                    <input type="text" name="mob" v-va:mobile="mobile" v-model.trim="mobile" class="va">
                 </div>
+                <div class="col-xs-12"><button v-vaCheck>点击提交</button></div> 
             </div>
         </div>
     </div>
@@ -38,7 +39,8 @@ input:focus {
             test(reg) {
                 // console.log(reg)
                 return reg;
-            }
+            },
+           
         }
     }
 
