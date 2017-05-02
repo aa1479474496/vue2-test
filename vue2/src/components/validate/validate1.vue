@@ -5,7 +5,8 @@
             <div class="row">
                 <div class="col-xs-4">
                     <label for="">用户名：</label>
-                    <input v-va:imgCode="imgCode" v-model.trim="imgCode" type="text" name="img" value="" class="va">
+                    <input v-model.trim="imgCode" type="text" name="img" value="">
+                    <p v-if="test(imgCode)">error</p>
                 </div>
                  <div class="col-xs-4">
                     <label for="">密码：</label>
@@ -37,8 +38,12 @@ input:focus {
         },
         methods:{
             test(reg) {
-                // console.log(reg)
-                return reg;
+                console.log(reg)
+                if(reg) {
+                    return true
+                }
+                return false
+                // return reg;
             },
            
         }
