@@ -22,7 +22,12 @@ var myMixin = {
             console.log(abc)
         },
         check(regName, regValue) {
-            return regList[regName].test(regValue);
+            console.log('regValue:' + regValue);
+            if(!regValue && regValue != 0) {
+                return '';
+            }
+            var flag = regList[regName].test(regValue);
+            return flag;
         },
         checkAll(o) {
             var flag = true;

@@ -6,13 +6,15 @@
                 <div class="col-xs-4">
                     <label for="">用户名2：</label>
                     <input v-model.trim="imgCode" type="text" name="img" value="">
-                    <p v-if="!check('imgCode', imgCode)">用户名2不正确</p>
+                    <p v-if="check('imgCode', imgCode) === false">用户名2不正确</p>
+                    <p v-if="check('imgCode', imgCode) === true">用户名2正确</p>
                     <p>{{check('imgCode', imgCode)}}</p>
                 </div>
                  <div class="col-xs-4">
                     <label for="">密码2：</label>
                     <input type="text" name="mob" v-model.trim="mobile">
-                    <p v-if="!check('mobile', mobile)">密码2不正确</p>
+                    <p v-if="check('mobile', mobile) === false">密码2不正确</p>
+                    <p v-if="check('mobile', mobile) === true">密码2正确</p>
                     <p>{{check('mobile', mobile)}}</p>
                 </div>
                 <div class="col-xs-12"><button @click="checkForm">点击提交</button></div> 
@@ -36,7 +38,7 @@ input:focus {
     export default {
         data() {
             return {
-                imgCode: '',
+                imgCode: 0,
                 mobile: ''
             }
         },
