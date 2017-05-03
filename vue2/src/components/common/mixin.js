@@ -21,14 +21,18 @@ var myMixin = {
         hello: function(abc) {
             console.log(abc)
         },
-        check(regName, regValue) {
-            console.log('regValue:' + regValue);
-            if(!regValue && regValue != 0) {
-                return '';
+        check(regName, regValue, required) {
+            if (!required) {
+                if (!regValue && regValue !== 0) {
+                    return '';
+                }
             }
+
             var flag = regList[regName].test(regValue);
+
             return flag;
         },
+
         checkAll(o) {
             var flag = true;
             if (!o || typeof o != 'object') {
@@ -36,14 +40,14 @@ var myMixin = {
                 return false;
             }
             for (var i in o) {
-                var f = this.check(i, o[i]);
-                if(!f) {
-                  flag = false
+                var f = this.check(i, o[i], 1);
+                if (!f) {
+                    flag = false
                 }
                 console.log('f:' + f);
             }
             return flag;
-            
+
         }
 
     }

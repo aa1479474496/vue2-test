@@ -52,6 +52,7 @@ input:focus {
                 return o;
             },
             checkForm() {
+                this.check('mobile', this.mobile);
                 var flag = this.checkAll(this.params());
                 console.log('flag:' + flag);
             }
