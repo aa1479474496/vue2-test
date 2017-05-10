@@ -28,14 +28,16 @@
         },
         methods:{
            test(event) {
-            //    console.log(event.keyCode);
+               console.log(event.keyCode);
                var value = event.currentTarget.value;
                if(value[0] == 0) {
                    event.currentTarget.value = 0;
-                   return;
+                   return ;
                }
+               console.log('old: ' , event.currentTarget.value);
                event.currentTarget.value=event.currentTarget.value.replace(/\D/g,'')
-                console.log(event.currentTarget.value);
+                console.log('new: ', event.currentTarget.value);
+                
            }
            
         }
