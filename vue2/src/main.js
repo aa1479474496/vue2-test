@@ -155,23 +155,22 @@ const routes = [{
         component(resolve) {
             require(['./components/directives/directives.vue'], resolve)
         },
-        children: [
-            {
-                path:'',
+        children: [{
+                path: '',
                 component(resolve) {
                     require(['./components/directives/directives1.vue'], resolve)
                 }
             },
             {
-                path:'directives1',
-                name:'directives1',
+                path: 'directives1',
+                name: 'directives1',
                 component(resolve) {
                     require(['./components/directives/directives1.vue'], resolve)
                 }
             },
-             {
-                path:'directives2',
-                name:'directives2',
+            {
+                path: 'directives2',
+                name: 'directives2',
                 component(resolve) {
                     require(['./components/directives/directives2.vue'], resolve)
                 }
@@ -185,14 +184,14 @@ const routes = [{
             require(['./components/plugins/plugins.vue'], resolve)
         }
     },
-     {
+    {
         path: '/table',
         name: 'table',
         component: function(resolve) {
             require(['./components/table/table.vue'], resolve)
         }
     },
-     {
+    {
         path: '/express',
         name: 'express',
         component: function(resolve) {
@@ -205,25 +204,31 @@ const routes = [{
         component(resolve) {
             require(['./components/validate/validate.vue'], resolve)
         },
-        children: [
-            {
-                path:'',
+        children: [{
+                path: '',
                 component(resolve) {
                     require(['./components/validate/validate1.vue'], resolve)
                 }
             },
             {
-                path:'validate1',
-                name:'validate1',
+                path: 'validate1',
+                name: 'validate1',
                 component(resolve) {
                     require(['./components/validate/validate1.vue'], resolve)
                 }
             },
-             {
-                path:'validate2',
-                name:'validate2',
+            {
+                path: 'validate2',
+                name: 'validate2',
                 component(resolve) {
                     require(['./components/validate/validate2.vue'], resolve)
+                }
+            },
+            {
+                path: 'validate3',
+                name: 'validate3',
+                component(resolve) {
+                    require(['./components/validate/validate3.vue'], resolve)
                 }
             }
         ]
