@@ -99,7 +99,7 @@ const routes = [{
                     require(['./components/test/test1.vue'], resolve)
                 }
             }, {
-                path: 'test2/:storeId',
+                path: 'test2',
                 name: 'test2',
                 component: function(resolve) {
                     require(['./components/test/test2.vue'], resolve)

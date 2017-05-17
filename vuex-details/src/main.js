@@ -52,6 +52,11 @@ const routes = [{
                 path: 'vfor3',
                 name: 'vfor3',
                 component(resolve) { require(['./components/learn/vfor3.vue'], resolve) }
+            },
+             {
+                path: 'routetest',
+                name: 'routetest',
+                component(resolve) { require(['./components/learn/routetest.vue'], resolve) }
             }
         ]
     }

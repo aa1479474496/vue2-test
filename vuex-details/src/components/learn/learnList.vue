@@ -9,8 +9,10 @@
             <router-link :to="{path:'/learn/vfor1',query:{abc:1}}" tag="li">去学习v-for1</router-link>
             <router-link :to="{name:'vfor2',params:{def:222}}" tag="li">去学习v-for2</router-link>
             <router-link :to="{path:'/learn/vfor3'}" tag="li">去学习v-for3</router-link>
+            <!--<router-link :to="{name:'routetest',params:{aaa:333}}" tag="li">route test</router-link>-->
         </ul>
         
+        <div style="cursor: pointer;" @click="navigatTo">点击去route test</div>
         <div class="learnLisView">
             <router-view></router-view>
         </div>
@@ -30,6 +32,11 @@
              console.log(this.path);
             //  setInterval(() => this.num++,1000);
              
+        },
+        methods: {
+            navigatTo() {
+                this.$router.push({name:'routetest',params:{aaa:333}})
+            }
         },
         watch: {
             'num' : function(val) {

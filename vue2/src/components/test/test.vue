@@ -3,6 +3,7 @@
        
         <p>test</p>
         <router-link :to="{path:'/test/test1'}" :class="{on:$store.state.route.path == '/test/test1'}">去test1页面</router-link>
+        <!--<router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>-->
         <router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>
         <router-view></router-view>
         <!--<info></info>-->
