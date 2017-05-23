@@ -230,6 +230,13 @@ const routes = [{
                 component(resolve) {
                     require(['./components/validate/validate3.vue'], resolve)
                 }
+            },
+            {
+                path: 'validate4',
+                name: 'validate4',
+                component(resolve) {
+                    require(['./components/validate/validate4.vue'], resolve)
+                }
             }
         ]
     }
@@ -250,6 +257,10 @@ const router = new VueRouter({
     routes,
 });
 sync(store, router)
+router.afterEach((to, from, next) => {
+    console.log('path: ' + router.currentRoute.path);
+    
+})
 new Vue({
     router: router,
     render: h => h(App)

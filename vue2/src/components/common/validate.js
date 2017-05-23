@@ -14,7 +14,7 @@ var regList = {
 }
 
 var validate = {};
-validate.install = function (Vue, options) {
+validate.install = function(Vue, options) {
     Vue.directive('va', {
         bind(el, binding, vnode) {
             // 逻辑...
@@ -31,44 +31,49 @@ validate.install = function (Vue, options) {
             // })
         },
         update(el, binding, vnode) {
-            // console.log(1);
-            
             var reg = binding.arg,
                 value = binding.value;
-                if(!value) {
+            if (!value) {
                 return
             }
-             var flag = regList[reg].test(value);
-            //   console.log($(this));
-             if(!flag) {
-                // vnode.context.test(reg);
+            var flag = regList[reg].test(value);
+               console.log(vnode.context.errormsg);
+            if (!flag) {
+                vnode.context.errormsg[reg] = reg;
                 $(el).addClass('warn').removeClass('success');
-             } 
-             else{
-                  $(el).addClass('success').removeClass('warn');
-             }  
-             console.log(flag);
+
+            } else {
+                vnode.context.errormsg[reg] = '';
+
+                $(el).addClass('success').removeClass('warn');
+            }
             //  console.log(vnode.context);
-             
+
         }
-  });
-  Vue.directive('vaCheck', {
-         bind: function (el, binding, vnode) {
-              var vm = vnode.context;
-              el.addEventListener('click', function () {
+    });
+    Vue.directive('vaCheck', {
+        bind: function(el, binding, vnode) {
+            var vm = vnode.context;
+            el.addEventListener('click', function() {
                 //   console.log(vm)
                 //   var vas = $('.va');
-                  $('.va').focus();
+                $('.va').focus();
                 //   console.log(vas);
                 //   for(var i = 0; i < vas.length; i++) {
                 //         vas[i].on('blur',function() {
                 //             console.log(i)
                 //         });
                 //   }
-              })
-         }
-  })
+            })
+        }
+    })
 
 }
+
+function aaa(rule) {
+    console.log('rule:' + rule);
+}
+
+
 
 module.exports = validate;

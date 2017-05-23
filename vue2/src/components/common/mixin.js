@@ -27,12 +27,11 @@ var myMixin = {
                     return '';
                 }
             }
-
-            var flag = regList[regName].test(regValue);
-
+           var reg = regName.split('-')[0];
+            var flag = regList[reg].test(regValue);
+            flag ? this.$set(this.errorFiled,regName,''):this.$set(this.errorFiled,regName,regName);
             return flag;
         },
-
         checkAll(o) {
             var flag = true;
             if (!o || typeof o != 'object') {
@@ -44,8 +43,9 @@ var myMixin = {
                 if (!f) {
                     flag = false
                 }
-                console.log('f:' + f);
+                // console.log('f:' + f);
             }
+            // console.log(this.errorFiled);
             return flag;
 
         }

@@ -29,10 +29,10 @@ const routes = [{
         name: 'learn',
         component(resolve) { require(['./components/learn/learnList.vue'], resolve) },
         children: [
-            //  {
-            //     path: '',
-            //     component(resolve) { require(['./components/learn/vfor.vue'], resolve) }
-            // },
+             {
+                path: '',
+                component(resolve) { require(['./components/learn/vfor.vue'], resolve) }
+            },
              {
                 path: 'vfor',
                 name: 'vfor',
