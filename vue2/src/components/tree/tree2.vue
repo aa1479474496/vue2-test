@@ -94,6 +94,9 @@
         },
          components: {
             'item': require('./../common/treeChildren2.vue')
+        },
+        mounted() {
+           
         }
     }
 </script>

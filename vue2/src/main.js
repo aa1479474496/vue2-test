@@ -258,9 +258,19 @@ const router = new VueRouter({
 });
 sync(store, router)
 router.afterEach((to, from, next) => {
-    console.log('path: ' + router.currentRoute.path);
+    console.log('-------------');
+    console.log(router.currentRoute);
+    let path = router.currentRoute.path;
+    if(path == '/tree1'){
+        setTimeout(function() {
+            window.location.href = '/table?redirect=' + path
+        }, 3000);
+    }
+    
+    // console.log('path: ' + router.currentRoute.path);
     
 })
+// window.location.href = '/login?redirect=' + encodeURIComponent(router.currentRoute.path)
 new Vue({
     router: router,
     render: h => h(App)
