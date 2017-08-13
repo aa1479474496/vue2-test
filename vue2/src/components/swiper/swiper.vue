@@ -13,7 +13,13 @@
                         <div class="swiper-slide"
                              v-for="(list,childIndex) in item.list"
                              :key="index">
-                            <img class="common-img"
+                            <a href='#' v-if="item.name=='全景图'"
+                               target="_blank"> <i class="qj-link"></i></a>
+                            <a href='#' v-if="item.name=='航拍'"
+                               target="_blank"> <i class="hp-link"></i></a>
+                            <a href='#' v-if="item.name=='3D建模'"
+                               target="_blank"> <i class="threeD-link"></i></a>
+                            <img class="common-img blur-img"
                                  :data-arrIndex="index"
                                  :data-item='(childIndex + 1) + "/" + item.list.length'
                                  :src="list.src"
@@ -22,33 +28,33 @@
                     </template>
     
                     <!--<div class="swiper-slide"
-                                                                     v-for="(item, index) in plainList"
-                                                                     :key="index">
-                                                                    <img class="common-img"
-                                                                         :src="item.src"
-                                                                         alt="">
-                                                                </div>
-                                                                <div class="swiper-slide"
-                                                                     v-for="(item, index) in qjList"
-                                                                     :key="index">
-                                                                    <img class="common-img"
-                                                                         :src="item.src"
-                                                                         alt="">
-                                                                </div>
-                                                                <div class="swiper-slide"
-                                                                     v-for="(item, index) in hpList"
-                                                                     :key="index">
-                                                                    <img class="common-img"
-                                                                         :src="item.src"
-                                                                         alt="">
-                                                                </div>
-                                                                <div class="swiper-slide"
-                                                                     v-for="(item, index) in threeDList"
-                                                                     :key="index">
-                                                                    <img class="common-img"
-                                                                         :src="item.src"
-                                                                         alt="">
-                                                                </div>-->
+                                                                         v-for="(item, index) in plainList"
+                                                                         :key="index">
+                                                                        <img class="common-img"
+                                                                             :src="item.src"
+                                                                             alt="">
+                                                                    </div>
+                                                                    <div class="swiper-slide"
+                                                                         v-for="(item, index) in qjList"
+                                                                         :key="index">
+                                                                        <img class="common-img"
+                                                                             :src="item.src"
+                                                                             alt="">
+                                                                    </div>
+                                                                    <div class="swiper-slide"
+                                                                         v-for="(item, index) in hpList"
+                                                                         :key="index">
+                                                                        <img class="common-img"
+                                                                             :src="item.src"
+                                                                             alt="">
+                                                                    </div>
+                                                                    <div class="swiper-slide"
+                                                                         v-for="(item, index) in threeDList"
+                                                                         :key="index">
+                                                                        <img class="common-img"
+                                                                             :src="item.src"
+                                                                             alt="">
+                                                                    </div>-->
     
                 </div>
                 <!--<div class="swiper-pagination swiper-pagination1"></div>-->
