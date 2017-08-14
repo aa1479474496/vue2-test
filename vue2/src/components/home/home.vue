@@ -22,6 +22,7 @@
         <router-link :to="{path:'/table'}">table测试</router-link>
         <router-link :to="{path:'/express'}" target="_blank">express测试</router-link>
         <router-link :to="{path:'/validate'}">validate测试</router-link>
+        <router-link :to="{path:'/swiper'}">swiper测试</router-link>
         
         <!--<router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>-->
 

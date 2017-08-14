@@ -1,0 +1,154 @@
+.fl{
+  float: left;
+}
+.fr{
+  float:right;
+}
+.clearfix:before,
+.clearfix:after{
+  display: table;
+  content: " ";
+}
+.clearfix:after{
+  clear: both;
+}
+.swiper-krpano-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+}
+.krpano-back {
+    display: block;
+    float: left;
+    margin: 15px 0 0 15px;
+    width: 7px;
+    height: 13px;
+    background: url(/static/goBack.png) no-repeat center;
+    background-size: contain;
+}
+
+.swiper-title {
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    margin: 0 22px;
+    height: 44px;
+    line-height: 44px;
+}
+.krpano-mask {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 44px;
+    bottom: 40px;
+    background: #000;
+    text-align: center;
+}
+
+.krpano-mask:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.05em;
+}
+
+.parent-wrapper {
+    width: 99%;
+    margin: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.parent-wrapper .swiper-pagination,.activity-container .swiper-pagination {
+    font-size: 12px;
+    color: transparent;
+}
+
+#nav-swiper .swiper-slide {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background: #202020;
+    text-align: center;
+}
+#nav-swiper .swiper-wrapper{
+    background: #202020;
+}
+
+#nav-swiper .swiper-slide.active-nav {
+    font-size: 16px;
+}
+
+#nav-swiper .active-nav {
+    color: #0983e0!important;
+}
+
+.nav-krpano-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.qj-link,
+.hp-link,
+.threeD-link {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    margin: -30px 0 0 -30px;
+    z-index: 1100;
+    display: block;
+}
+.qj-link {
+    background: url(/static/qj360.png) center center no-repeat;
+    background-size: 100% auto;
+}
+.threeD-link {
+    background: url(/static/icon_qj360.png) center center no-repeat;
+    background-size: 100% auto;
+}
+.hp-link{
+    background: url(/static/hp-icon.png) center center no-repeat;
+    background-size: 100% auto;
+}
+.blur-img {
+    filter: blur(5px);
+}
+/*//活动列表弹出轮播*/
+.activity-mask {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 44px;
+    bottom: 0;
+    background: #000;
+    text-align: center;
+}
+.activity-mask:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.25em;
+}
+
+.activity-container {
+    width: 99%;
+    margin: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.common-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

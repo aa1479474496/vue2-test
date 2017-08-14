@@ -93,17 +93,40 @@ const routes = [{
                 }
             },
             {
-                path: 'test1',
-                name: 'test1',
+
+                path: '/test',
+                name: 'test',
                 component: function(resolve) {
-                    require(['./components/test/test1.vue'], resolve)
-                }
-            }, {
-                // path: 'test2',
-                path: 'test2/:storeId',
-                name: 'test2',
+                    require(['./components/test/test.vue'], resolve)
+                },
+                children: [{
+                        path: '',
+                        name: 'info',
+                        component: function(resolve) {
+                            require(['./components/test/test1.vue'], resolve)
+                        }
+                    },
+                    {
+                        path: 'test1',
+                        name: 'test1',
+                        component: function(resolve) {
+                            require(['./components/test/test1.vue'], resolve)
+                        }
+                    }, {
+                        // path: 'test2',
+                        path: 'test2/:storeId',
+                        name: 'test2',
+                        component: function(resolve) {
+                            require(['./components/test/test2.vue'], resolve)
+                        }
+                    }
+                ]
+            },
+            {
+                path: '/regionAdd',
+                name: 'regionAdd',
                 component: function(resolve) {
-                    require(['./components/test/test2.vue'], resolve)
+                    require(['./components/region/regionAdd.vue'], resolve)
                 }
             }
         ]
@@ -193,6 +216,13 @@ const routes = [{
         }
     },
     {
+        path: '/swiper',
+        name: 'swiper',
+        component: function(resolve) {
+            require(['./components/swiper/swiper.vue'], resolve)
+        }
+    },
+    {
         path: '/express',
         name: 'express',
         component: function(resolve) {
@@ -262,7 +292,7 @@ sync(store, router)
 router.afterEach((to, from, next) => {
         console.log('-------------');
         console.log(router.currentRoute);
-        console.log('aaa',router.currentRoute.matched);
+        console.log('aaa', router.currentRoute.matched);
         let path = router.currentRoute.path;
         if (path == '/tree1') {
             setTimeout(function() {
