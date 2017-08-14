@@ -21,22 +21,6 @@ Vue.prototype.$htp = axios;
 
 Vue.use(Toast1);
 Vue.use(validate);
-
-// const routes = [{
-//         path: '',
-//         name: 'home',
-//         component: function(resolve) {
-//             require(['./components/home/home'], resolve)
-//         }
-//     },
-//     {
-//         path: '/user/:id',
-//         name: '/user/:id',
-//         component: function(resolve) {
-//             require(['./components/user/Commentuser'], resolve)
-//         }
-//     }
-// ];
 const routes = [{
         path: '',
         name: 'home',
