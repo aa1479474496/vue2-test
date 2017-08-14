@@ -12,6 +12,7 @@
     "axios": "^0.16.0",
     "bootstrap": "^3.3.7",
     "jquery": "^2.2.3",
+    "swiper": "^3.4.2",
     "vue": "^2.1.0",
     "vuex": "^2.0.0",
     "vuex-router-sync": "^3.0.0"
