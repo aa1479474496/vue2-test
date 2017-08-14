@@ -93,40 +93,17 @@ const routes = [{
                 }
             },
             {
-
-                path: '/test',
-                name: 'test',
+                path: 'test1',
+                name: 'test1',
                 component: function(resolve) {
-                    require(['./components/test/test.vue'], resolve)
-                },
-                children: [{
-                        path: '',
-                        name: 'info',
-                        component: function(resolve) {
-                            require(['./components/test/test1.vue'], resolve)
-                        }
-                    },
-                    {
-                        path: 'test1',
-                        name: 'test1',
-                        component: function(resolve) {
-                            require(['./components/test/test1.vue'], resolve)
-                        }
-                    }, {
-                        // path: 'test2',
-                        path: 'test2/:storeId',
-                        name: 'test2',
-                        component: function(resolve) {
-                            require(['./components/test/test2.vue'], resolve)
-                        }
-                    }
-                ]
-            },
-            {
-                path: '/regionAdd',
-                name: 'regionAdd',
+                    require(['./components/test/test1.vue'], resolve)
+                }
+            }, {
+                // path: 'test2',
+                path: 'test2/:storeId',
+                name: 'test2',
                 component: function(resolve) {
-                    require(['./components/region/regionAdd.vue'], resolve)
+                    require(['./components/test/test2.vue'], resolve)
                 }
             }
         ]
@@ -304,6 +281,7 @@ router.afterEach((to, from, next) => {
 
     })
     // window.location.href = '/login?redirect=' + encodeURIComponent(router.currentRoute.path)
+  
 new Vue({
     router: router,
     render: h => h(App)
