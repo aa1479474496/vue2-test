@@ -15,39 +15,7 @@
                             <img class="common-img" :class="[item.name=='平面图'?'':'blur-img']" :data-arrIndex="index" :data-item='(childIndex + 1) + "/" + item.list.length' :src="list.src" alt="">
                         </div>
                     </template>
-    
-                    <!--<div class="swiper-slide"
-                                                                             v-for="(item, index) in plainList"
-                                                                             :key="index">
-                                                                            <img class="common-img"
-                                                                                 :src="item.src"
-                                                                                 alt="">
-                                                                        </div>
-                                                                        <div class="swiper-slide"
-                                                                             v-for="(item, index) in qjList"
-                                                                             :key="index">
-                                                                            <img class="common-img"
-                                                                                 :src="item.src"
-                                                                                 alt="">
-                                                                        </div>
-                                                                        <div class="swiper-slide"
-                                                                             v-for="(item, index) in hpList"
-                                                                             :key="index">
-                                                                            <img class="common-img"
-                                                                                 :src="item.src"
-                                                                                 alt="">
-                                                                        </div>
-                                                                        <div class="swiper-slide"
-                                                                             v-for="(item, index) in threeDList"
-                                                                             :key="index">
-                                                                            <img class="common-img"
-                                                                                 :src="item.src"
-                                                                                 alt="">
-                                                                        </div>-->
-    
                 </div>
-                <!--<div class="swiper-pagination swiper-pagination1"></div>-->
-    
             </div>
         </div>
     
@@ -114,7 +82,6 @@ export default {
     },
     computed: {
         pageTitle() {
-            // debugger
             if (this.arrTotal.length && this.arrTotal[0].list.length) {
                 let title = $('.parent-wrapper .swiper-slide').eq(this.activeIndex).find('.common-img').attr('data-item');
                 return title || ('1' + '/' + this.arrTotal[0].list.length);
