@@ -99,7 +99,8 @@ const routes = [{
                     require(['./components/test/test1.vue'], resolve)
                 }
             }, {
-                path: 'test2',
+                // path: 'test2',
+                path: 'test2/:storeId',
                 name: 'test2',
                 component: function(resolve) {
                     require(['./components/test/test2.vue'], resolve)
@@ -256,21 +257,23 @@ const router = new VueRouter({
     },
     routes,
 });
+
 sync(store, router)
 router.afterEach((to, from, next) => {
-    console.log('-------------');
-    console.log(router.currentRoute);
-    let path = router.currentRoute.path;
-    if(path == '/tree1'){
-        setTimeout(function() {
-            window.location.href = '/table?redirect=' + path
-        }, 3000);
-    }
-    
-    // console.log('path: ' + router.currentRoute.path);
-    
-})
-// window.location.href = '/login?redirect=' + encodeURIComponent(router.currentRoute.path)
+        console.log('-------------');
+        console.log(router.currentRoute);
+        console.log('aaa',router.currentRoute.matched);
+        let path = router.currentRoute.path;
+        if (path == '/tree1') {
+            setTimeout(function() {
+                window.location.href = '/table?redirect=' + path
+            }, 3000);
+        }
+
+        // console.log('path: ' + router.currentRoute.path);
+
+    })
+    // window.location.href = '/login?redirect=' + encodeURIComponent(router.currentRoute.path)
 new Vue({
     router: router,
     render: h => h(App)

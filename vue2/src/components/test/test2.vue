@@ -14,7 +14,7 @@
             }
         },
         mounted: function() {
-            console.log(this.storeId);
+            console.log('storeId:',this.storeId);
             // console.log(this.$router);
         }
     }

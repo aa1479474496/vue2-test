@@ -16,6 +16,7 @@
         <div class="learnLisView">
             <router-view></router-view>
         </div>
+
     </div>
 </template>
 

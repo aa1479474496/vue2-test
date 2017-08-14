@@ -18,6 +18,9 @@
     import store from './vuex/store'
     import Hello from './components/Hello'
     export default {
-        store
+        store,
+        mounted() {
+            console.log('app');
+        }
     }
 </script>
