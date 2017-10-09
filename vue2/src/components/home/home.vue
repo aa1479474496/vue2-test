@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--<div style="height:800px;border:1px solid skyblue;"></div>-->
-        <div>home</div>
+        <div class="test-prefixer text-center">home</div>
        
         <!--<router-link to="/user/foo">/user/foo</router-link>
         <router-link to="/user/bar">/user/bar</router-link>-->
@@ -23,6 +23,8 @@
         <router-link :to="{path:'/express'}" target="_blank">express测试</router-link>
         <router-link :to="{path:'/validate'}">validate测试</router-link>
         <router-link :to="{path:'/swiper'}">swiper测试</router-link>
+        <router-link :to="{path:'/swiper'}">swiper测试</router-link>
+        <a href="https://www.baidu.com">百度</a>
         
         <!--<router-link :to="{name:'test2',params:{storeId:JSON.stringify({a:1,b:2,c:3})}}">去test2页面</router-link>-->
 
