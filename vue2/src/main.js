@@ -250,22 +250,22 @@ const router = new VueRouter({
 });
 
 sync(store, router)
-router.afterEach((to, from, next) => {
-        console.log('-------------');
-        console.log(router.currentRoute);
-        console.log('aaa', router.currentRoute.matched);
-        let path = router.currentRoute.path;
-        if (path == '/tree1') {
-            setTimeout(function() {
-                window.location.href = '/table?redirect=' + path
-            }, 3000);
-        }
+// router.afterEach((to, from, next) => {
+//         console.log('-------------');
+//         console.log(router.currentRoute);
+//         console.log('aaa', router.currentRoute.matched);
+//         let path = router.currentRoute.path;
+//         if (path == '/tree1') {
+//             setTimeout(function() {
+//                 window.location.href = '/table?redirect=' + path
+//             }, 3000);
+//         }
+//     })
 
-        // console.log('path: ' + router.currentRoute.path);
+router.afterEach(route => {
+  console.log('route',route);
+});
 
-    })
-    // window.location.href = '/login?redirect=' + encodeURIComponent(router.currentRoute.path)
-  
 new Vue({
     router: router,
     render: h => h(App)
